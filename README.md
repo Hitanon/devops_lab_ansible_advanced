@@ -1,4 +1,4 @@
-1. Создание и заполнение файла со списком целей для сканирования
+### 1. Создание и заполнение файла со списком целей для сканирования
 cd ~/lab-ansible
 nano targets.txt
 
@@ -7,11 +7,11 @@ etis.psu.ru
 www.psu.ru
 
 
-2. Создание плейбука
+### 2. Создание плейбука
 nano playbook_nmap.yml
 
 
-3. Заполнение плейбука
+### 3. Заполнение плейбука
 ---
 - hosts: webservers
   become_method: sudo
@@ -40,5 +40,5 @@ nano playbook_nmap.yml
         msg: "{{ nmap_result.stdout_lines }}"
 
 
-4. Запуск плейбука
+### 4. Запуск плейбука
 ansible-playbook playbook_nmap.yml -i inventory.ini
